@@ -1,0 +1,319 @@
+*{
+  box-sizing: border-box;
+}
+
+html, body{
+  padding: 0;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+button{
+  cursor: pointer;
+}
+
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+header nav{
+ height: 60px;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ background: #222;
+ padding: 0 10px;
+}
+
+header nav a{
+  color: #fff;
+  text-decoration: none;
+}
+
+.add__product{
+  margin-right: 20px;
+  text-decoration: underline;
+  color: rgb(245, 182, 10);
+}
+
+
+header nav a.card__count{
+  padding: 10px 30px;
+  background: rgb(8, 12, 8);
+  border: dotted 2px lime;
+}
+header nav a sup{
+  padding: 3px 7px;
+  background: gray;
+  border-radius: 50%;
+  margin-left: 5px;
+}
+
+main{
+  margin-top: 60px;
+  padding: 10px;
+}
+
+main .container{
+  padding: 0 100px;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-gap: 20px;
+}
+
+main .container .card{
+  border: none;
+  position: relative;
+  border: 1px solid #eee;
+}
+
+main .container .card img{
+  width: 100%;
+  height: 220px;
+}
+
+
+main .container .card section{
+  background: #eee;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+.product__title{
+  /* font-size: 1.2rem; */
+  /* font-weight: bold; */
+  margin-bottom: 10px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+.product__title span{
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.product__text span{
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.product__text{
+  display: grid;
+  /* font-size: 14px; */
+  /* font-weight: bold; */
+  color: #333;
+}
+main .container .card .icon__wrapper{
+  position: absolute;
+  right: 10px;
+  bottom: 90%;
+}
+.editCard{
+  border: none;
+  background: none;
+  font-size: large;
+}
+
+.deleteCard{
+  border: none;
+  background: none;
+  font-size: large;
+}
+main .container .card button.AddToCard{
+  position: absolute;
+  background: none;
+  color: dodgerblue;
+  border: solid 1px dodgerblue;
+  border-radius: 50%;
+  right: 10px;
+  bottom: 75px;
+  font-size: 2em;
+  padding: 5px 12px;
+  box-shadow: 0px 2px 10px 0px rgb(8, 12, 8, .4);
+  transition: all .30s ease-in-out;
+ 
+}
+
+main .container .card button:hover{
+  background : dodgerblue;
+  color: #fff;
+}
+
+main .addproduct{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  position: fixed;
+  top: 60px; 
+  right: -100%;
+  width: 600px;
+  padding-bottom: 25px;
+  z-index: 10;
+  background: #fff;
+  box-shadow: 0px 2px 10px 0px rgb(8, 12, 8, .4);
+  transition: all .30s ease-in-out;
+}
+
+.addproduct h1{
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+main .addproduct.opened{
+  right: 0;
+}
+
+main .callout{
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+  top: 60px;
+  right: -100%;
+  bottom: 0;
+  width: 500px;
+  background: whitesmoke;
+  z-index: 1;
+  box-shadow: 0 10px 20px rgb(8, 12, 8);
+  transition: all .38s ease-in-out;
+}
+
+/* main .callout .row:first-child{
+  height: calc(100vh - 210px);
+} */
+
+main .callout .row:last-child{
+  background: #222;
+  color: #fff;
+  height: 150px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  padding: 10px;
+}
+
+main .callout .row:last-child section:first-child{
+  display: grid;
+}
+main .callout .row:last-child section:last-child{
+  display: grid;
+  grid-gap: 10px;
+}
+
+main .callout .row:last-child section:last-child button.btn__reset{
+  background: red;
+  color: #fff;
+  border: none;
+}
+main .callout .row:last-child section:last-child button.btn__checkout{
+  background: transparent;
+  color: #fff;
+  border: none;
+}
+
+
+main .callout .row:first-child .card{
+  display: grid;
+  grid-template-columns: auto 1fr auto auto;
+  grid-gap: 10px;
+  background: #eee;
+  border-bottom: 1px solid #fff;
+}
+
+main .callout .row:first-child .card img{
+  width: 100px;
+  height: 80px;
+}
+
+main .callout .row:first-child .card section{
+  display: grid;
+}
+main .callout .row:first-child .card button.btn__remove{
+  background: none;
+  color: red;
+  border: none;
+  margin: 0 20px;
+  font-size: 2rem;
+}
+
+main .callout .alert{
+  background: rgb(255, 75, 75);
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+main .callout.open{
+  right: 0;
+}
+.cart__items{
+  display:grid;
+}
+.cart__items .card{
+  border-bottom: 1px solid #fff;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+.card img{
+  height: 80px;
+}
+
+.card__text{
+  padding-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 10px;
+}
+.card__text span{
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.card__btn-wrapper{
+  display: flex;
+  justify-content: center;
+}
+.card__btn{
+  background: none;
+  color: red;
+  border: none;
+  padding: 0;
+  margin: 0 20px;
+  font-size: 2rem;
+}
+.card__amount{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart__footer{
+  display: flex;
+  justify-content: space-between;
+  grid-gap: 10px;
+  background: #222;
+  padding: 10px;
+  padding: 20px 50px;
+}
+
+.card__footer-text{
+  color: #fff;
+  font-size: 1.2rem;
+}
+.cart__footer-btn button{
+  background: red;
+  color: #fff;
+  border: none;
+  padding: 10px 20px; 
+  border-radius: 5px; 
+  /* font-size: 1.2rem; */
+}
+
+.cart__total span{
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+}

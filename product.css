@@ -1,0 +1,102 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  padding: 0;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+}
+
+button{
+  cursor: pointer;
+}
+
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+header nav{
+ height: 60px;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ background: #222;
+ padding: 0 10px;
+}
+
+header nav a{
+  color: #fff;
+  text-decoration: none;
+}
+
+.home{
+  margin-right: 30px;
+  text-decoration: underline;
+  color: rgb(245, 182, 10);
+}
+
+.container{
+  width: 100%;
+  max-width: 1200px;
+  /* margin: 0 auto; */
+  padding: 10px 200px;
+  margin-top: 60px;
+}
+
+.product__form{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.product__wrapper{
+  width: 350px;
+  flex-grow: 1;
+}
+.img__wrapper{
+  text-align: center;
+  /* background: #eee; */
+  border: solid 1px #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.about__form{
+  text-align: center;
+}
+.about__form input{
+  width: 100%;
+  padding: 10px;
+  border: solid 1px #ccc;
+  border-radius: 5px;
+}
+.btn__wrapper{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.form__btn{
+  width: 47%;
+  padding: 10px;
+  background: rgb(77, 207, 44);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.form__btn:hover{
+  background: rgb(71, 180, 41);
+}
+
+.cancel{
+  background: #ccc;
+  width: 47%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.cancel:hover{
+  background: rgb(190, 190, 190);
+}

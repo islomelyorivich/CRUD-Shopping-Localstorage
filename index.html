@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SHOPPING CARD</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="product.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="#" class="brand">SHOPPING CARD WEBSITE</a>
+      <div class="about">
+        <a href="#" class="add__product" onclick="$('main .addproduct').toggleClass('opened')">Add Product +</a>
+        <a href="#" class="card__count" onclick="$('main .callout').toggleClass('open');">Card <sup>0</sup></a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <div class="addproduct">
+      <h1>Add Product</h1>
+      <form class="product__form">
+        <div class="product__wrapper">
+          <div class="img__wrapper">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdimGnCWNU2-gdLP4UG5DROdId6M1fV957UA&usqp=CAU" alt="name">
+          </div>
+          <div class="about__form">
+            <input required type="text" class="name" name="name" placeholder="Name">
+            <input required type="number" class="price" name="price" placeholder="Price">
+            <input required type="text" class="description" name="description" placeholder="Description"> <br>
+            <div class="btn__wrapper">
+              <button class="cancel">CANCEL</button>
+              <button class="form__btn">ADD</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div class="container products">
+      
+    </div>
+    <div class="callout">
+      <div class="cart__items">
+        
+      </div>
+      <div class="cart__footer">
+        <div class="cart__total">
+          <span>Total: $ </span>
+          <span class="total">0</span>
+        </div>
+        <div class="cart__footer-btn">
+          <button type="button" class="btn__reset" onclick="resetCart();">Clear</button>
+
+        </div>
+      </div>
+    </div>
+    <div class="cart__total"></div>
+  </main>
+
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>
